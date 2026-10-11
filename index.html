@@ -3,13 +3,22 @@
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<title>Form Website</title>
+		<style>
+			input:user-valid {
+				border-color: green;
+			}
+			
+			input:user-invalid {
+				border-color: red;
+			}
+		</style>
 	</head>
 	
 	<body>
 		<form class="container row mt-3">
 			<div class="col-2">
 				<label for="name">Name (only letters)</label>
-				<input type="text" class="form-control" id="name" name="username" placeholder="John" pattern="[a-zA-Z][a-z]{1,14}" required minlength="2" maxlength="15"><br>
+				<input type="text" class="form-control" id="name" name="username" placeholder="John" required pattern="[a-zA-Z][a-z]{1,14}" minlength="2" maxlength="15"><br>
 			</div>
 			<div class="col-3">
 				<label for="mail">Mail</label>

@@ -11,5 +11,8 @@ Added requirements to input.
 ### Task 2
 ![Task 2](images/task2.png)
 Added `Bootstrap` class styling and placeholder text in the input.
+### Task 3
+![Task 3](images/task3.png)
+Currently bootstrap validation doesn't work in the client-side. In other words, validation can work only through basic HTML/CSS, or using JavaScript.
 ### Summary
 (to do)
