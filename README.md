@@ -13,6 +13,8 @@ Added requirements to input.
 Added `Bootstrap` class styling and placeholder text in the input.
 ### Task 3
 ![Task 3](images/task3.png)
-Currently bootstrap validation doesn't work in the client-side. In other words, validation can work only through basic HTML/CSS, or using JavaScript.
+Currently `Bootstrap` validation doesn't work in the client-side. In other words, validation can work only through basic HTML/CSS, or using JavaScript.
+### Task 4
+Since checking if `password` and `confirm password` are equal requires JavaScript, and currently we haven't learned it yet, I cannot finish this part.
 ### Summary
-(to do)
+In this assignment I learned how to combine `html` forms with `Bootstrap`.
