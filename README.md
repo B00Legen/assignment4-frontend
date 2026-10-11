@@ -5,5 +5,8 @@ Fourth assignment for the `Web Technologies 1` course
 ### Task 0
 ![Task 0](images/task0.png)
 Basic `html` form.
+### Task 1
+![Task 1](images/task1.png)
+Added requirements to input.
 ### Summary
 (to do)
