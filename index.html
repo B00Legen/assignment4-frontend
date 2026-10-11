@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<title>Form Website</title>
 	</head>
 	
 	<body>
-		<form>
-			<label for="name">Name</label>
-			<input type="text" id="name" name="username" required minlength="2" maxlength="15"><br>
-			<label for="mail">Mail</label>
-			<input type="email" id="mail" name="email" required><br>
-			<label for="msg">Message</label>
-			<input type="textarea" id="msg" name="message"><br>
-			<input type="submit">
+		<form class="container row mt-3">
+			<div class="col-2">
+				<label for="name">Name (only letters)</label>
+				<input type="text" class="form-control" id="name" name="username" placeholder="John" pattern="[a-zA-Z][a-z]{1,14}" required minlength="2" maxlength="15"><br>
+			</div>
+			<div class="col-3">
+				<label for="mail">Mail</label>
+				<input type="email" class="form-control" id="mail" name="email" placeholder="name@example.com" required><br>
+			</div>
+			<div class="col-4">
+				<label for="msg">Message</label>
+				<input type="textarea" class="form-control" id="msg" name="message" placeholder="Hello World!"><br>
+			</div>
+			<button type="submit" class="col-1 my-4 btn btn-primary">Submit</button>
 		</form>
 	</body>
 </html>

@@ -8,5 +8,8 @@ Basic `html` form.
 ### Task 1
 ![Task 1](images/task1.png)
 Added requirements to input.
+### Task 2
+![Task 2](images/task2.png)
+Added `Bootstrap` class styling and placeholder text in the input.
 ### Summary
 (to do)
