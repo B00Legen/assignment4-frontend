@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/validator.js" defer></script>
 		<title>Form Website</title>
 		<style>
 			input:user-valid {
@@ -15,20 +16,99 @@
 	</head>
 	
 	<body>
-		<form class="container row mt-3">
-			<div class="col-2">
-				<label for="name">Name (only letters)</label>
-				<input type="text" class="form-control" id="name" name="username" placeholder="John" required pattern="[a-zA-Z][a-z]{1,14}" minlength="2" maxlength="15"><br>
+		<form class="row m-3 needs-validation" novalidate>
+			<div class="col-3">
+				<label for="name" class="form-label">First Name</label>
+				<input type="text" class="form-control" id="name" placeholder="Mark" required pattern="[a-zA-Z][a-z]{1,14}">
+				<div class="valid-feedback">
+					Looks good!
+				</div>
+				<div class="invalid-feedback">
+					Use only English letters! (2-15). Only 1st may be uppercase!
+				</div>
 			</div>
 			<div class="col-3">
-				<label for="mail">Mail</label>
-				<input type="email" class="form-control" id="mail" name="email" placeholder="name@example.com" required><br>
+				<label for="surname" class="form-label">Last Name</label>
+				<input type="text" class="form-control" id="Surname" placeholder="Zuckerberg" required pattern="[a-zA-Z][a-z]{1,14}">
+				<div class="valid-feedback">
+					Looks good!
+				</div>
+				<div class="invalid-feedback">
+					Use only English letters! (2-15). Only 1st may be uppercase!
+				</div>
 			</div>
 			<div class="col-4">
-				<label for="msg">Message</label>
-				<input type="textarea" class="form-control" id="msg" name="message" placeholder="Hello World!"><br>
+				<label for="mail" class="form-label">Email</label>
+				<input type="email" class="form-control" id="mail" placeholder="mark.z@example.com" required pattern="[a-zA-Z]{1,}[a-zA-Z0-9.-_]{1,}@[a-z]{2,}[.][a-z]{2,}">
+				<div class="valid-feedback">
+					Looks good!
+				</div>
+				<div class="invalid-feedback">
+					Invalid email!
+				</div>
 			</div>
-			<button type="submit" class="col-1 my-4 btn btn-primary">Submit</button>
+			<div class="col-3">
+				<label for="passwd" class="form-label">Password</label>
+				<input type="password" class="form-control" id="passwd" placeholder="12345678" required pattern="[a-zA-Z0-9!-_]{8,}">
+				<div class="valid-feedback">
+					Looks good!
+				</div>
+				<div class="invalid-feedback">
+					Use only a-z, A-Z, 0-9, !, -, _! At least 8 symbols long!
+				</div>
+			</div>
+			<div class="col-3">
+				<label for="passwd2" class="form-label">Confirm Password</label>
+				<input type="password" class="form-control" id="passwd2" placeholder="12345678" required pattern="[a-zA-Z0-9!-_]{8,}">
+				<div class="valid-feedback">
+					Looks good!
+				</div>
+				<div class="invalid-feedback">
+					Use only a-z, A-Z, 0-9, !, -, _! At least 8 symbols long!
+				</div>
+			</div>
+			<div class="col-1">
+				<div class="form-check">
+					<input type="radio" class="form-check-input" id="male" name="radio-stacked" required>
+					<label class="form-check-label" for="male">Male</label>
+				</div>
+				<div class="form-check">
+					<input type="radio" class="form-check-input" id="female" name="radio-stacked" required>
+					<label class="form-check-label" for="female">Female</label>
+					<div class="invalid-feedback">Select a gender!</div>
+				</div>
+			</div>
+			<div class="col-1">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="basketball">
+					<label class="form-check-label" for="basketball">Basketball</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="soccer">
+					<label class="form-check-label" for="soccer">Soccer</label>
+				</div>
+			</div>
+			<div class="col-2">
+				<label for="country" class="form-label">Country</label>
+				<select class="form-select" id="country" required>
+					<option selected disabled value="">Choose...</option>
+					<option>Kazakhstan</option>
+					<option>Russia</option>
+					<option>other...</option>
+				</select>
+				<div class="valid-feedback">
+					Looks good!
+				</div>
+				<div class="invalid-feedback">
+					Please select a valid country!
+				</div>
+			</div>
+			<div class="col-12">
+				<button class="btn btn-primary" type="submit">Submit form</button>
+			</div>
+			<div class="col-12">
+				<button class="btn btn-primary" type="reset">Reset</button>
+			</div>
 		</form>
 	</body>
 </html>
